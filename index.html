@@ -5,21 +5,45 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
         <title>Rock, Paper, Scissors</title>
     </head>
     <body>
         <header>
             <h1>Rock, Paper, Scissors</h1>
         </header>
-        <section class="left-section">
+        <p class="winner">
+            <!-- "" won this round -->
+        </p>
+        <div class="game-buttons">
+            <button class="game-icon" id="paper">
+                <!-- paper -->
+            </button>
+            <button class="game-icon" id="scissors">
+                <!-- scissors -->
+            </button>
+            <button class="game-icon" id="rock">
+                <!-- rock -->
+            </button>
+        </div>
+        <section class="left-section-wrapper">
+            <h3>human</h3>
+            <div>
+                <!-- score -->
+            </div>
+            <button>Change Game</button>
             <!-- left section will go here -->
         </section>
         <main>
             <!-- game will go here -->
         </main>
-        <section class="right-section">
+        <section class="right-section-wrapper">
+            <h3>computer</h3>
+            <div>
+                <!-- score -->
+            </div>
             <!-- right section will go here -->
         </section>
+        <script src="main.js"></script>
     </body>
-
 </html>

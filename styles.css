@@ -1,0 +1,45 @@
+* {
+    font-family: 'DynaPuff', cursive;
+}
+
+body {
+    border: 2px solid red;
+    background-color: #79B267
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+.right-section-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    background-color: #89b57b;
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-section-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 350px;
+    background-color: #89b57b;
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    height: 50px;
+    width: 80px;
+    margin-top: 200px;
+  }
+
+ 
+  
