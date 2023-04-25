@@ -1,6 +1,8 @@
 // query Selectors
 // var gameSection = document.querySelectorAll(".game-buttons")
 
+// Event listeners
+
 // global variables
 
 var easyOptions = ["rock", "paper", "scissors"]
@@ -25,8 +27,6 @@ function createGame() {
         human: human,
         computer: computer,
     }
-    // gameObject = game
-    console.log(game)
     return gameObject
 }
 
