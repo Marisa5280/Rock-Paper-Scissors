@@ -22,7 +22,8 @@ h1 {
   width: 350px;
   background-color: #89b57b;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   }
 
 .left-section-wrapper {
@@ -37,10 +38,18 @@ h1 {
   flex-direction: column;
   }
 
+.game-choice-button {
+  margin-top: 250px;
+  height: 60px; 
+  width: 125px;
+}  
+
 .selection {
   height: 80px;
   width: 80px;
   margin: 20px;
+  cursor: pointer;
+  transform: scale(1.1);
   }
 
 #rock {
