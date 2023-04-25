@@ -3,8 +3,9 @@
 }
 
 body {
-  border: 2px solid red;
-  background-color: #79B267
+  background-color: #79B267;
+  height: 100vh;
+
 }
 
 h1 {
@@ -37,13 +38,53 @@ h1 {
   }
 
 button {
-  height: 50px;
+  height: 80px;
   width: 80px;
-  margin-top: 200px;
+  margin: 20px;
   }
 
+#rock {
+  background: transparent;
+  background-image: url("assets/rock.png");
+  background-size: cover; 
+  border: none;
+} 
+
+#paper {
+  background: transparent;
+  background-image: url("assets/paper.png");
+  background-size: cover; 
+  border: none;
+}
+ 
+#scissors {
+  background: transparent;
+  background-image: url("assets/scissors.png");
+  background-size: cover; 
+  border: none;
+}
+
+#lizard {
+  background: transparent;
+  background-image: url("assets/lizard.png");
+  background-size: cover; 
+  border: none;
+}
+
+#alien {
+  background: transparent;
+  background-image: url("assets/alien.png");
+  background-size: cover; 
+  border: none;
+}
+  
 h2 {
   margin-top: 75px;
 }
  
-  
+main {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  justify-items: center; 
+}  
