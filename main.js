@@ -1,5 +1,5 @@
 // query Selectors
-var gameSection = document.querySelectorAll(".game-buttons")
+var gameButtons = document.querySelector(".selection")
 var changeGameButton = document.querySelector(".game-choice-button")
 var easyGameRules = document.querySelector(".easy-rules")
 var hardGameRules = document.querySelector(".hard-rules")
@@ -10,44 +10,45 @@ var paper = document.querySelector("#paper")
 var scissors = document.querySelector("#scissors")
 var lizard = document.querySelector("#lizard")
 var alien = document.querySelector("#alien")
+var mainSect = document.querySelector(".main-sect")
 
 // Event listeners
-window.addEventListener("load", function(event){
-    event.preventDefault();
-    // chooseGame()
-})
 
 easyGameRules.addEventListener("click", chooseEasyGame)
 hardGameRules.addEventListener("click", chooseHardGame)
+mainSect.addEventListener("click", easyTest)
+
 // global variables
 
 var easyOptions = ["rock", "paper", "scissors"]
 var hardOptions = ["rock", "paper", "scissors", "lizard", "alien"]
-var game = createGame(); 
+var game = createGame();
+
+function easyTest(event) {
+    if (event.target.classList.contains("selection")){
+        createGame();
+        game.human.selection = event.target.id
+    }
+    console.log(game.human)
+}
 
 function chooseEasyGame() {
-        show(rock);
-        show(paper);
-        show(scissors);
-        hide(rulesWrapper)
-        textbox.innerText = `choose your fighter`
-        // playEasyGame function
-    }
+    show(rock);
+    show(paper);
+    show(scissors);
+    hide(rulesWrapper)
+    textbox.innerText = `choose your fighter`
+}
 
 function chooseHardGame() {
-        show(rock);
-        show(paper);
-        show(scissors);
-        show(lizard);
-        show(alien);
-        hide(rulesWrapper)
-        textbox.innerText = "choose your fighter"
-        // playHardGame function
+    show(rock);
+    show(paper);
+    show(scissors);
+    show(lizard);
+    show(alien);
+    hide(rulesWrapper)
+    textbox.innerText = `choose your fighter`
 }
-// function playEasyGame() {
-    // creategame()
-    // on user click have computer take turn
-// }
 
 function createPlayer(name, token) {
     var player = {
@@ -63,7 +64,7 @@ function createGame() {
     var human = createPlayer("human", "🤠")
     var computer = createPlayer("computer", "🤖")
     var gameObject = {
-        mode: "easy",
+
         human: human,
         computer: computer,
     }
@@ -75,7 +76,7 @@ function getRandomIndex(array) {
 }
 
 function takeTurn(game) {
-    if(game.mode === "easy"){
+    if (game.mode === "easy") {
         var random = getRandomIndex(easyOptions)
         game.computer.selection = easyOptions[random]
     }
@@ -89,18 +90,18 @@ function determineEasyWinner(game) {
         'paper > rock',
         'scissors > paper'
     ]
-        if (easyWinner.includes(`${game.human.selection} > ${game.computer.selection}`) ){
-            game.human.wins += 1
-            return 'human wins!'
-        } else if (game.human.selection === game.computer.selection){
-            return 'DRAW!'
-        } else {
-            game.computer.wins += 1
-            return 'computer wins!'
-        }
+    if (easyWinner.includes(`${game.human.selection} > ${game.computer.selection}`)) {
+        game.human.wins += 1
+        return 'human wins!'
+    } else if (game.human.selection === game.computer.selection) {
+        return 'DRAW!'
+    } else {
+        game.computer.wins += 1
+        return 'computer wins!'
     }
-    
-function determineHardWinner(game) {   
+}
+
+function determineHardWinner(game) {
     var hardWinner = [
         'rock > scissors',
         'rock > lizard',
@@ -110,13 +111,13 @@ function determineHardWinner(game) {
         'scissors > lizard',
         'lizard > paper',
         'lizard > alien',
-        'alien > scissors', 
+        'alien > scissors',
         'alien > rock'
     ]
-    if (hardWinner.includes(`${game.human.selection} > ${game.computer.selection}`) ){
+    if (hardWinner.includes(`${game.human.selection} > ${game.computer.selection}`)) {
         game.human.wins += 1
         return 'human wins!'
-    } else if (game.human.selection === game.computer.selection){
+    } else if (game.human.selection === game.computer.selection) {
         return 'DRAW!'
     } else {
         game.computer.wins += 1
