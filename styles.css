@@ -3,8 +3,9 @@
 }
 
 body {
-  border: 2px solid red;
-  background-color: #79B267
+  background-color: #79B267;
+  height: 100%;
+
 }
 
 h1 {
@@ -21,7 +22,8 @@ h1 {
   width: 350px;
   background-color: #89b57b;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   }
 
 .left-section-wrapper {
@@ -36,14 +38,79 @@ h1 {
   flex-direction: column;
   }
 
-button {
-  height: 50px;
+.game-choice-button {
+  margin-top: 250px;
+  height: 60px; 
+  width: 125px;
+}  
+
+.selection {
+  height: 80px;
   width: 80px;
-  margin-top: 200px;
+  margin: 20px;
+  cursor: pointer;
+  transform: scale(1.1);
   }
 
+#rock {
+  background: transparent;
+  background-image: url("assets/rock.png");
+  background-size: cover; 
+  border: none;
+} 
+
+#paper {
+  background: transparent;
+  background-image: url("assets/paper.png");
+  background-size: cover; 
+  border: none;
+}
+ 
+#scissors {
+  background: transparent;
+  background-image: url("assets/scissors.png");
+  background-size: cover; 
+  border: none;
+}
+
+#lizard {
+  background: transparent;
+  background-image: url("assets/lizard.png");
+  background-size: cover; 
+  border: none;
+}
+
+#alien {
+  background: transparent;
+  background-image: url("assets/alien.png");
+  background-size: cover; 
+  border: none;
+}
+  
 h2 {
   margin-top: 75px;
 }
  
-  
+main {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  justify-items: center; 
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin-left: 25%;
+}  
+
+.rules {
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  border: 2px solid darkgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+

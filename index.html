@@ -15,40 +15,36 @@
         <p class="winner">
             <!-- "" won this round -->
         </p>
-        <div class="game-buttons">
-            <button class="game-icon" id="paper">
-                paper
-            </button>
-            <button class="game-icon" id="scissors">
-                scissors
-            </button>
-            <button class="game-icon" id="rock">
-                rock
-            </button>
-        </div>
-        <section class="left-section-wrapper">
-            <h2>human</h2>
+        <aside class="left-section-wrapper">
+            <h2>🤠human🤠</h2>
             <div class="score">
-                <!-- score -->
+                score
+                <p class="score" id="human-score">#</p>
             </div>
-            <button>Change Game</button>
-            <!-- left section will go here -->
-        </section>
-        <main class="game">
-            <!-- <button class="selection" id="rock">ROCK</button>
-            <button class="selection" id="paper">PAPER</button>
-            <button class="selection" id="scissors">SCISSORS</button>
-            <button class="selection hidden" id="lizard">LIZARD</button>
-            <button class="selection hidden" id="alien">ALIEN</button>
-            game will go here -->
+            <button class="game-choice-button">Change Game</button>
+        </aside>
+        <main>
+            <div class="game-buttons">
+                <button class="selection" id="rock"></button>
+                <button class="selection" id="paper"></button>
+                <button class="selection" id="scissors"></button>
+                <button class="selection" id="lizard"></button>
+                <button class="selection" id="alien"></button>
+            </div>
+            <ul class="rules">
+                <h3>Easy Game</h3>
+                <li>rock crushes scissors</li> 
+                <li>scissors cut paper</li>
+                <li>paper covers rock</li>
+            </ul>
         </main>
-        <section class="right-section-wrapper">
-            <h2>computer</h2>
+        <aside class="right-section-wrapper">
+            <h2>🤖computer🤖</h2>
             <div class="score">
-                <!-- score -->
+                score
+                <p class="score" id="computer-score">#</p>
             </div>
-            <!-- right section will go here -->
-        </section>
+        </aside>
         <script src="main.js"></script>
     </body>
 </html>
