@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles.css">
-        <title>Rock, Paper, Scissors</title>
-    </head>
-    <body>
-        <header>
-            <h1>Rock, Paper, Scissors</h1>
-        </header>
-        <p class="winner">
-            <!-- "" won this round -->
-        </p>
-        <aside class="left-section-wrapper">
-            <h2>🤠human🤠</h2>
-            <div class="score">
-                score
-                <p class="score" id="human-score">#</p>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <aside class="left-section-wrapper">
+        <h2>🤠human🤠</h2>
+        <div class="score">
+            score
+            <p class="score" id="human-score"></p>
+        </div>
+        <button class="game-choice-button" hidden>Change Game</button>
+    </aside>
+    <main class="main-sect">
+        <h1>Rock, Paper, Scissors</h1>
+        <p class="text-box">choose your game</p>
+        <div class="game-buttons">
+            <button class="selection" hidden id="rock"></button>
+            <button class="selection" hidden id="paper"></button>
+            <button class="selection" hidden id="scissors"></button>
+            <button class="selection" hidden id="lizard"></button>
+            <button class="selection" hidden id="alien"></button>
+        </div>
+        <section class="display-winner" hidden></section>
+        <section class="rules-wrapper">
+            <div class="easy-rules" hidden>
+                <ul>
+                    <h3>Easy Game</h3>
+                    <li>rock crushes scissors</li>
+                    <li>scissors cut paper</li>
+                    <li>paper covers rock</li>
+                </ul>
             </div>
-            <button class="game-choice-button">Change Game</button>
-        </aside>
-        <main>
-            <div class="game-buttons">
-                <button class="selection" id="rock"></button>
-                <button class="selection" id="paper"></button>
-                <button class="selection" id="scissors"></button>
-                <button class="selection" id="lizard"></button>
-                <button class="selection" id="alien"></button>
+            <div class="hard-rules">
+                <ul>
+                    <h3>Hard Game</h3>
+                    <li>rock > scissors, lizard</li>
+                    <li>paper > rock, alien</li>
+                    <li>scissors > paper, lizard</li>
+                    <li>lizard > paper, alien</li>
+                    <li>alien > scissors, rock</li>
+                </ul>
             </div>
-            <ul class="rules">
-                <h3>Easy Game</h3>
-                <li>rock crushes scissors</li> 
-                <li>scissors cut paper</li>
-                <li>paper covers rock</li>
-            </ul>
-        </main>
-        <aside class="right-section-wrapper">
-            <h2>🤖computer🤖</h2>
-            <div class="score">
-                score
-                <p class="score" id="computer-score">#</p>
-            </div>
-        </aside>
-        <script src="main.js"></script>
-    </body>
+        </section>
+    </main>
+    <aside class="right-section-wrapper">
+        <h2>🤖computer🤖</h2>
+        <div class="score">
+            score
+            <p class="score" id="computer-score"></p>
+        </div>
+    </aside>
+    <script src="main.js"></script>
+</body>
+
 </html>
