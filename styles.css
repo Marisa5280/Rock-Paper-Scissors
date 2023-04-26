@@ -103,7 +103,7 @@ main {
   margin-left: 25%;
 }  
 
-.rules {
+.easy-rules, .hard-rules {
   margin: 20px;
   height: 200px;
   width: 200px;
@@ -112,5 +112,6 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+  cursor: pointer;
 }
 
