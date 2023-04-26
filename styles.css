@@ -5,13 +5,11 @@
 body {
   background-color: #79B267;
   height: 100%;
-
 }
 
 h1 {
   display: flex;
   justify-content: center;
-
 }
 
 .right-section-wrapper {
@@ -94,7 +92,6 @@ h2 {
 main {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   justify-items: center; 
   flex-direction: column;
   align-items: center;
@@ -105,8 +102,8 @@ main {
 
 .easy-rules, .hard-rules {
   margin: 20px;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 2px solid darkgreen;
   display: flex;
   flex-direction: column;
@@ -115,3 +112,7 @@ main {
   cursor: pointer;
 }
 
+img {
+  height: 100px;
+  width: 100px;
+}

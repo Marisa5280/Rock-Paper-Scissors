@@ -15,13 +15,13 @@
         <h2>🤠human🤠</h2>
         <div class="score">
             score
-            <p class="score" id="human-score">#</p>
+            <p class="score" id="human-score"></p>
         </div>
         <button class="game-choice-button" hidden>Change Game</button>
     </aside>
     <main class="main-sect">
         <h1>Rock, Paper, Scissors</h1>
-        <p class="text-box"></p>
+        <p class="text-box">choose your game</p>
         <div class="game-buttons">
             <button class="selection" hidden id="rock"></button>
             <button class="selection" hidden id="paper"></button>
@@ -29,9 +29,10 @@
             <button class="selection" hidden id="lizard"></button>
             <button class="selection" hidden id="alien"></button>
         </div>
+        <section class="display-winner" hidden></section>
         <section class="rules-wrapper">
-            <div>
-                <ul class="easy-rules" hidden>
+            <div class="easy-rules" hidden>
+                <ul>
                     <h3>Easy Game</h3>
                     <li>rock crushes scissors</li>
                     <li>scissors cut paper</li>
@@ -54,7 +55,7 @@
         <h2>🤖computer🤖</h2>
         <div class="score">
             score
-            <p class="score" id="computer-score">#</p>
+            <p class="score" id="computer-score"></p>
         </div>
     </aside>
     <script src="main.js"></script>
