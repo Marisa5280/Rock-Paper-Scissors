@@ -35,6 +35,7 @@ function goHome() {
     hide(buttonsWrapper)
     textbox.innerText = `choose a game!`
 }
+
 function easyGame(event) {
     if (event.target.classList.contains("selection")) {
         var game = createEasyGame();
@@ -58,6 +59,7 @@ function hardGame(event) {
         return game
     }
 }
+
 function displayFighters() {
     for (var i = 0; i < gameButtons.length; i++) {
         hide(gameButtons[i])
@@ -65,7 +67,7 @@ function displayFighters() {
     show(displayWinners)
     displayWinners.innerHTML =
         `<img src="assets/${human.selection}.png">
-    <img src="assets/${computer.selection}.png">`
+        <img src="assets/${computer.selection}.png">`
 }
 
 function chooseEasyGame() {
@@ -135,10 +137,7 @@ function takeHardTurn(game) {
     }
     return game
 }
-
-    game.human.selection = "paper"
-    return game
-}
+ 
 function determineEasyWinner(game) {
     var easyWinner = [
         'rock > scissors',
@@ -157,18 +156,6 @@ function determineEasyWinner(game) {
     humanScore.innerText = `${game.human.wins}`
     computerScore.innerText = `${game.computer.wins}`
 }
-
-function determineHardWinner(game) {
-        if (easyWinner.includes(`${game.human.selection} > ${game.computer.selection}`) ){
-            game.human.wins += 1
-            return 'human wins!'
-        } else if (game.human.selection === game.computer.selection){
-            return 'DRAW!'
-        } else {
-            game.computer.wins += 1
-            return 'computer wins!'
-        }
-    }
     
 function determineHardWinner(game) {   
     var hardWinner = [
@@ -222,22 +209,4 @@ function hide(element) {
 
 function show(element) {
     element.removeAttribute("hidden")
-        'alien > scissors', 
-        'alien > rock'
-    ]
-    if (hardWinner.includes(`${game.human.selection} > ${game.computer.selection}`) ){
-        game.human.wins += 1
-        return 'human wins!'
-    } else if (game.human.selection === game.computer.selection){
-        return 'DRAW!'
-    } else {
-        game.computer.wins += 1
-        return 'computer wins!'
-    }
-}
-
-function resetBoard(game) {
-    game.computer.wins = 0;
-    game.human.wins = 0;
-    return game
 }
